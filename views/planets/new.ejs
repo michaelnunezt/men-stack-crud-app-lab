@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Create a Planet</title>
+</head>
+<body>
+  <h1>Add a New Planet</h1>
+  <form action="/planets" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name"/>
+
+    <label for="hasLife">Has Life?:</label>
+    <input type="checkbox" name="hasLife" id="hasLife" />
+
+    <label for="description">Description:</label>
+    <textarea name="description" id="description"></textarea>
+
+    <label for="distanceFromSun">Distance from Sun (million km):</label>
+    <input type="number" name="distanceFromSun" required>
+
+
+    <button class="btn" type="submit">Add Planet</button>
+  </form>
+  <a class="link" href="/planets">Back to Planets</a>
+</body>
+</html>

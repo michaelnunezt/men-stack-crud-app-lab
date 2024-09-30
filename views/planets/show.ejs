@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= planet.name %></title> <!-- Dynamic title based on fruit name -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <h1><%= planet.name %></h1> <!-- Display fruit name -->
+    <p><%= planet.description %></p>
+
+    <div class="event-btns">
+      <!-- Form to delete a planet-->
+      <form action="/planets/<%= planet._id %>?_method=DELETE" method="POST">
+        <button class="btn delete" type="submit">Delete <%= planet.name %></button>
+      </form>
+
+      <!-- Link to edit form -->
+      <a class="btn edit" href="/planets/<%= planet._id %>/edit">Edit <%= planet.name %></a>
+    </div>
+
+      <!-- Link to index --> 
+      <a class="link" href="/planets">Back to Planets</a>
+    </body>
+</html>

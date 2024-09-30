@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planets Index</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <h1>All Planets</h1>
+    <ul>
+      <% planets.forEach(planet => { %>
+        <li>
+          <a class="planet-item" href="/events/<%=planet._id%>"><%= planet.name %></a>
+        </li>
+      <% }) %>
+    </ul>
+    <a class="btn" href="/planets/new">Add New Planet</a>
+  </body>
+</html>
